@@ -31,6 +31,81 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="include/constants.h" />
+		<Unit filename="include/cplx.h" />
+		<Unit filename="include/distance.h" />
+		<Unit filename="include/extract.h" />
+		<Unit filename="include/io.h" />
+		<Unit filename="include/mat.h" />
+		<Unit filename="include/math.h" />
+		<Unit filename="include/parser.h" />
+		<Unit filename="include/poly.h" />
+		<Unit filename="include/project.h" />
+		<Unit filename="include/random.h" />
+		<Unit filename="include/separable2D.h" />
+		<Unit filename="include/source.h" />
+		<Unit filename="include/source_func.h" />
+		<Unit filename="include/transform.h" />
+		<Unit filename="include/transform2D.h" />
+		<Unit filename="include/types.h" />
+		<Unit filename="include/utils.h" />
+		<Unit filename="include/vec.h" />
+		<Unit filename="include/wavelet.h" />
+		<Unit filename="include/wavelet2D.h" />
+		<Unit filename="main_embed.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/cplx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/distance.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/extract.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/io.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/mat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/math.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/parser.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/poly.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/project.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/random.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/separable2D.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/source.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/source_func.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/utils.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/vec.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/wavelet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/wavelet2D.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

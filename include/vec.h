@@ -785,6 +785,7 @@ cvec cvec_new_unit_roots(idx_t N);
 /* Generate some random vectors */
 void vec_rand( vec v );
 void vec_randn( vec v );
+void vec_rand_bin( vec v, int n );
 vec vec_new_rand( idx_t N );
 vec vec_new_randn( idx_t N );
 ivec ivec_new_perm( size_t len, unsigned int seed ); 
@@ -797,10 +798,21 @@ ivec ivec_new_perm( size_t len, unsigned int seed );
 vec vec_conv( vec v1, vec v2 );
 ivec ivec_conv( ivec v1, ivec v2 );
 
+
+/*
+void porteuses_2_init (int sub_dim, vec v1, vec v2);
+void porteuses_3_init (int sub_dim, vec v1, vec v2, vec v3);*/
+void vec_fill_ones(vec v, int dim_SP);
+void vec_full_ones(vec v);
+void vec_show(vec v);
+void vec_norm_patern(vec p);
+void split_HFBF(vec all, vec BF, vec HF);
+
 #ifdef __cplusplus
 }
 #endif /* extern "C" */
 #endif
+
 
 
 
