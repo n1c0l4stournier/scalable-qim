@@ -1751,6 +1751,17 @@ void split_HFBF(vec all, vec BF, vec HF)
      }
 }
 
+void split(vec orig, vec dest, int debut, int fin)
+{
+     int i;
+     int j = 0;
+     for (i = debut; i < fin; i++)
+     {
+         dest[j] = orig[i];
+         j++;
+     }
+}
+
 ivec ivec_concat( ivec v1, ivec v2 ) {
   idx_t i, j;
   ivec v;

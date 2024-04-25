@@ -672,6 +672,9 @@ void cmat_swap_rows( cmat m, idx_t i, idx_t j );
 void cmat_swap_cols( cmat m, idx_t i, idx_t j );
 
 mat filtrage(mat I);
+void imagette(mat A, mat B);
+void grd_image(mat A, mat B);
+void filtering(mat a, mat b, const double sg);
 
 #ifdef __cplusplus
 }

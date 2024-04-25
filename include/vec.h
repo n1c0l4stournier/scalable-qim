@@ -807,6 +807,7 @@ void vec_full_ones(vec v);
 void vec_show(vec v);
 void vec_norm_patern(vec p);
 void split_HFBF(vec all, vec BF, vec HF);
+void split(vec orig, vec dest, int debut, int fin);
 
 #ifdef __cplusplus
 }

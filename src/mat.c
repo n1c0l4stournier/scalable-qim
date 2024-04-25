@@ -2531,3 +2531,92 @@ mat filtrage(mat I)
         
      
 }
+
+
+void imagette(mat A, mat B)
+{
+     for (int i = 0; i < mat_height(A); i++)
+     {
+         for (int j = 0; j < mat_width(A); j++)
+         {
+             /*A[i][j] = B[2*i][2*j] + B[2*i+1][2*j] + B[2*i][2*j+1] + B[2*i+1][2*j+1];
+             A[i][j] = A[i][j] / 4;*/
+
+             A[i][j] = B[2*i][2*j];    
+         }
+     }
+}
+
+void grd_image(mat A, mat B)
+{
+     for (int i = 0; i < mat_height(B); i++)
+     {
+         for (int j = 0; j < mat_width(B); j++)
+         {
+             A[2*i][2*j] = B[i][j];
+             A[2*i+1][2*j] = B[i][j];
+             A[2*i][2*j+1] = B[i][j];
+             A[2*i+1][2*j+1] = B[i][j];             
+         }
+     }
+}
+
+
+/*! Gaussian blurring filter.
+ \param a Input image.
+ \param b Filtered image.
+ \param sg Standard deviation of the Gaussian filter. (ecart type)*/
+void filtering(mat a, mat b, const double sg) {
+     if(sg<=0)
+     {
+       mat_copy(b, a);
+     }
+     else {
+          
+   /*  Ajout M. CHAUMONT */
+   /**/const double DEUX_PI = 2.*M_PI;
+   /**/double d2;
+   /**/double** c = new double*[9];
+
+   /**/for(int di=-4; di<5; di++) {
+   /**/  c[di+4] = new double[9];
+   /**/  for(int dj=-4; dj<5; dj++) {
+   /**/    d2      = di*di + dj*dj;
+   /**/    c[di+4][dj+4] = 1.0/sqrt(sg*sg*DEUX_PI) * exp(-d2/(2.0*sg*sg)); //Modif M. CHAUMONT
+           //printf("%.5f -", c[di+4][dj+4]); 
+   /**/  }
+         //printf("\n");
+   /**/}
+
+
+   for(int i=0; i<mat_height( a ); i++) {
+     for(int j=0; j<mat_width( a ); j++) {
+       double s = 0;
+       double t = 0;
+       for(int di=-4; di<5; di++) {
+         for(int dj=-4; dj<5; dj++) {
+           //double d2 = di*di + dj*dj;
+           //double c  = 1.0/(sg*sg*6.2831853) * exp(-d2/(2.0*sg*sg)); // Enlevé par M. CHAUMONT
+           //double c  = 1.0/sqrt(sg*sg*DEUX_PI) * exp(-d2/(2.0*sg*sg));     //Modif M. CHAUMONT
+           if((i+di>=0) && (j+dj>=0) && (i+di<mat_height( a )) && (j+dj < mat_width( a ))) 
+           {
+             t+=c[di+4][dj+4]*a[i+di][j+dj];
+             s+=c[di+4][dj+4];
+           }
+         }
+       }
+       b[i][j] = int(0.5 + t/s);
+     } // Fin for j
+   } // Fin for i
+
+   // DESALLOCATION
+   for(int di=-4; di<5; di++) {
+     delete[] c[di+4];
+   }
+   delete[] c;
+ } // Fin else
+} 
+
+
+
+             

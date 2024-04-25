@@ -52,9 +52,7 @@
 		<Unit filename="include/vec.h" />
 		<Unit filename="include/wavelet.h" />
 		<Unit filename="include/wavelet2D.h" />
-		<Unit filename="main_embed.c">
-			<Option compilerVar="CC" />
-		</Unit>
+		<Unit filename="main_scalableQIM_embed.cpp" />
 		<Unit filename="src/cplx.c">
 			<Option compilerVar="CC" />
 		</Unit>
