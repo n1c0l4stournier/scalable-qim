@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="ScalableQIM" />
+		<Option title="scalable-qim-extract" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/ScalableQIM" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/scalable-qim-extract" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/ScalableQIM" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/scalable-qim-extract" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -52,9 +52,7 @@
 		<Unit filename="include/vec.h" />
 		<Unit filename="include/wavelet.h" />
 		<Unit filename="include/wavelet2D.h" />
-		<Unit filename="main_embed.c">
-			<Option compilerVar="CC" />
-		</Unit>
+		<Unit filename="main_scalableQIM_extract.cpp" />
 		<Unit filename="src/cplx.c">
 			<Option compilerVar="CC" />
 		</Unit>
