@@ -671,6 +671,8 @@ void bmat_swap_cols( bmat m, idx_t i, idx_t j );
 void cmat_swap_rows( cmat m, idx_t i, idx_t j ); 
 void cmat_swap_cols( cmat m, idx_t i, idx_t j );
 
+mat filtrage(mat I);
+
 #ifdef __cplusplus
 }
 #endif /* extern "C" */
