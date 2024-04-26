@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="scalable-qim">
+		<Project filename="scalable-qim-embed.cbp" />
+		<Project filename="scalable-qim-extract.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>
