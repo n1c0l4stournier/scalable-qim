@@ -49,7 +49,6 @@ extern "C"
 #define PI 3.141592653589793
 #define E  2.718281828459045
 
-
 #define PARAMFILE "filePara"
 
 #ifdef __cplusplus
